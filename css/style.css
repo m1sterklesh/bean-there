@@ -759,3 +759,9 @@ address {
     transform: none;
   }
 }
+
+.footer__bottom .footer__disclaimer {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: rgba(245, 230, 211, 0.45);
+}
