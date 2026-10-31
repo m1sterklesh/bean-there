@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean There</title>
+  <meta name="description" content="Bean There — уютная кофейня со свежей обжаркой, авторскими напитками и домашней выпечкой.">
+
+  <!-- Google Fonts: Playfair Display для заголовков, Inter для текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Bean There — на главную">
+        <!-- Простое SVG-зерно: овал + изогнутая «бороздка» -->
+        <svg class="logo__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="16" rx="10" ry="14" transform="rotate(30 16 16)" />
+          <path d="M10 25 C 17 18, 15 14, 22 7" />
+        </svg>
+        <span class="logo__text">Bean There</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">О нас</a></li>
+          <li><a class="nav__link" href="#menu">Меню</a></li>
+          <li><a class="nav__link" href="#reviews">Отзывы</a></li>
+          <li><a class="nav__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <!-- Дубль CTA для мобильного полноэкранного меню -->
+        <a class="btn btn--primary nav__cta" href="#contacts">Забронировать столик</a>
+      </nav>
+
+      <a class="btn btn--primary header__cta" href="#contacts">Забронировать столик</a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Свежая обжарка · с 7:30 утра</p>
+        <h1 class="hero__title" id="hero-title">Кофе, который будит лучше будильника</h1>
+        <p class="hero__subtitle">Зёрна из лучших регионов, обжаренные на этой неделе - и чашка готова за две минуты.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#menu">Смотреть меню</a>
+          <a class="btn btn--secondary" href="#contacts">Забронировать</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ О НАС ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="about__media">
+          <img src="images/about.jpg" width="1000" height="686" loading="lazy"
+               alt="Светлый зал кофейни: барная стойка, большое растение и плетёные стулья у столиков">
+        </figure>
+
+        <div class="about__text">
+          <p class="section__eyebrow">О нас</p>
+          <h2 class="section__title" id="about-title">Место, куда хочется вернуться</h2>
+          <p>Bean There появилась в 2019 году из простой идеи: кофе должен быть вкусным без компромиссов, а кофейня - местом, где тебя помнят по имени.</p>
+          <p>Мы сами обжариваем зерно небольшими партиями каждую неделю, поэтому в чашке всегда свежий и яркий вкус. Выпечку готовим на месте с раннего утра.</p>
+          <p>Заходите поработать с ноутбуком, встретиться с друзьями или просто взять стакан с собой по дороге.</p>
+
+          <ul class="features">
+            <li class="features__item">
+              <span class="features__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2c3 4 6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 3-7 6-11z"/></svg>
+              </span>
+              <div>
+                <h3 class="features__title">Своя обжарка</h3>
+                <p class="features__desc">Зерно не старше двух недель.</p>
+              </div>
+            </li>
+            <li class="features__item">
+              <span class="features__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div>
+                <h3 class="features__title">Без очередей</h3>
+                <p class="features__desc">Напиток готов в среднем за 2 минуты.</p>
+              </div>
+            </li>
+            <li class="features__item">
+              <span class="features__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg>
+              </span>
+              <div>
+                <h3 class="features__title">Домашняя выпечка</h3>
+                <p class="features__desc">Печём сами каждое утро.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ МЕНЮ ============ -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Меню</p>
+          <h2 class="section__title" id="menu-title">Что мы любим готовить</h2>
+        </header>
+
+        <div class="menu__grid">
+          <article class="card">
+            <img class="card__img" src="images/espresso.jpg" width="800" height="536" loading="lazy"
+                 alt="Чашка эспрессо с густой золотистой пенкой на тёмном столе">
+            <div class="card__body">
+              <h3 class="card__title">Эспрессо</h3>
+              <p class="card__desc">Плотный и сладкий, с нотами шоколада и карамели.</p>
+              <p class="card__price">150 ₽</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/cappuccino.jpg" width="800" height="732" loading="lazy"
+                 alt="Капучино с латте-артом в виде листа на белом блюдце, вид сверху">
+            <div class="card__body">
+              <h3 class="card__title">Капучино</h3>
+              <p class="card__desc">Эспрессо и бархатная молочная пена в идеальном балансе.</p>
+              <p class="card__price">220 ₽</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/latte.jpg" width="800" height="1200" loading="lazy"
+                 alt="Латте в стеклянной кружке с рисунком сердца на пенке">
+            <div class="card__body">
+              <h3 class="card__title">Латте</h3>
+              <p class="card__desc">Мягкий и молочный - для тех, кто любит понежнее.</p>
+              <p class="card__price">240 ₽</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/raf.jpg" width="800" height="1199" loading="lazy"
+                 alt="Чашка сливочного кофе с латте-артом на деревянном столе">
+            <div class="card__body">
+              <h3 class="card__title">Раф</h3>
+              <p class="card__desc">Взбитые сливки, ванильный сахар и эспрессо. Десерт в чашке.</p>
+              <p class="card__price">270 ₽</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/croissant.jpg" width="800" height="640" loading="lazy"
+                 alt="Два золотистых круассана, посыпанные сахарной пудрой">
+            <div class="card__body">
+              <h3 class="card__title">Круассан</h3>
+              <p class="card__desc">Хрустящий, слоёный, на французском сливочном масле.</p>
+              <p class="card__price">180 ₽</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/cheesecake.jpg" width="800" height="533" loading="lazy"
+                 alt="Кусок чизкейка с черничным топпингом на керамической тарелке">
+            <div class="card__body">
+              <h3 class="card__title">Чизкейк</h3>
+              <p class="card__desc">Нежный сливочный «Нью-Йорк» с черничным соусом.</p>
+              <p class="card__price">290 ₽</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Отзывы</p>
+          <h2 class="section__title" id="reviews-title">Что говорят гости</h2>
+        </header>
+
+        <div class="reviews__list">
+          <article class="review">
+            <!-- Визуально 5 звёзд, для скринридеров — текстовая оценка -->
+            <p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p>
+            <blockquote class="review__text">
+              <p>Лучший раф в районе! Захожу каждое утро перед работой, бариста уже знают мой заказ.</p>
+            </blockquote>
+            <p class="review__author">Анна К.</p>
+          </article>
+
+          <article class="review">
+            <p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p>
+            <blockquote class="review__text">
+              <p>Уютно, тихо и быстрый Wi-Fi. Провёл здесь полдня с ноутбуком — круассаны просто огонь.</p>
+            </blockquote>
+            <p class="review__author">Дмитрий С.</p>
+          </article>
+
+          <article class="review">
+            <p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p>
+            <blockquote class="review__text">
+              <p>Приятно удивил эспрессо — без горечи, очень сбалансированный. Чизкейк тоже рекомендую.</p>
+            </blockquote>
+            <p class="review__author">Мария Л.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <section class="footer__col" aria-labelledby="footer-contacts">
+        <h2 class="footer__title" id="footer-contacts">Контакты</h2>
+        <address class="footer__address">
+          <p>г. Москва, ул. Кофейная, 12</p>
+          <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+          <p><a href="mailto:hello@beanthere.coffee">hello@beanthere.coffee</a></p>
+        </address>
+      </section>
+
+      <section class="footer__col" aria-labelledby="footer-hours">
+        <h2 class="footer__title" id="footer-hours">Часы работы</h2>
+        <dl class="hours">
+          <div class="hours__row"><dt>Пн–Пт</dt><dd>7:30 – 22:00</dd></div>
+          <div class="hours__row"><dt>Сб–Вс</dt><dd>9:00 – 23:00</dd></div>
+        </dl>
+        <p class="footer__note">Забронировать столик можно по телефону.</p>
+      </section>
+
+      <section class="footer__col" aria-labelledby="footer-social">
+        <h2 class="footer__title" id="footer-social">Мы в соцсетях</h2>
+        <ul class="social">
+          <li>
+            <a class="social__link" href="#" aria-label="Telegram (заглушка)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social__link" href="#" aria-label="ВКонтакте (заглушка)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M7 9c.5 4 2.5 6 5 6V9m0 3c2 0 3-1.5 3.5-3M12 12c2 0 3.5 1.5 4 3"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social__link" href="#" aria-label="YouTube (заглушка)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 Bean There. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
